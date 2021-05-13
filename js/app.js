@@ -116,3 +116,4 @@ calcCookiesPerHour: function(){
 render: function(){
   this.calcCookiesPerHour();
   console.log('this is the render method');
+//testing branch
