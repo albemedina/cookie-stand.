@@ -8,116 +8,128 @@ let seattle = {
   avg: 6.3,
   dailyTotal: 0,
   cookiesPerHourArray: [],
+  //generated a random number for customers
   getCustomersPerHour: function () {
     return Math.floor(Math.random() * (this.max - this.min + 1) + this.min);
   },
   calcCookiesPerHour: function () {
+    let custThisHour = this.getCustomersPerHour();
+    for (let i = 0; i < hours.length; i++){
+      return Math.ceil(this.avg * custThisHour);
+    }
     // calc cookies for all 14 hours
     // write a for loop that uses the length of the hours arary
     //  in that loop
-    let custThisHour = this.getCustomersPerHour();
-    let cookiesSoldThisHour = Math.ceil(custThisHour * this.avg);
-    this.cookiesPerHourArray.push(cookiesSoldThisHour);
-    console.log('I am in the calcCookiesPerHour method', 'custThisHour: ', custThisHour, 'cookiesSoldThisHour: ', cookiesSoldThisHour);
+    // // push hourly sales to the array
+    // this.cookiesPerHourArray.push(cookiesSoldThisHour);
+    // console.log(this.custThisHour);
   },
-  render: function () {
-    this.calcCookiesPerHour();
-    console.log('this is the render method');
-    let tokyo = {
-      name: 'Tokyo',
-      min: 3,
-      max: 24,
-      avg: 1.2,
-      dailyTotal: 0,
-      cookiesPerHourArray: [],
-      getCustomersPerHour: function () {
-        return Math.floor(Math.random() * (this.max - this.min + 1) + this.min);
-      }
-    }
-  },
-  calcCookiesPerHour: function () {
+}
+ console.log(seattle.cookiesPerHourArray);
+ console.log(seattle.cookiesSoldThisHour);
+ console.log(seattle.calcCookiesPerHour);
+ console.log(seattle.getCustomersPerHour);
+
+
+
+  // render: function () {
+  //   this.calcCookiesPerHour();
+  //   console.log('this is the render method');
+  //   let tokyo = {
+  //     name: 'Tokyo',
+  //     min: 3,
+  //     max: 24,
+  //     avg: 1.2,
+  //     dailyTotal: 0,
+  //     cookiesPerHourArray: [],
+  //     getCustomersPerHour: function () {
+  //       return Math.floor(Math.random() * (this.max - this.min + 1) + this.min);
+  //     }
+  //   }
+  // },
+  // calcCookiesPerHour: function () {
     // calc cookies for all 14 hours
     // write a for loop that uses the length of the hours arary
     //  in that loop
-    let custThisHour = this.getCustomersPerHour();
-    let cookiesSoldThisHour = Math.ceil(custThisHour * this.avg);
-    this.cookiesPerHourArray.push(cookiesSoldThisHour);
-    console.log('I am in the calcCookiesPerHour method', 'custThisHour: ', custThisHour, 'cookiesSoldThisHour: ', cookiesSoldThisHour);
-  },
-  render: function () {
-    this.calcCookiesPerHour();
-    console.log('this is the render method');
-    let dubai = {
-      name: 'Dubai',
-      min: 11,
-      max: 38,
-      avg: 3.7,
-      dailyTotal: 0,
-      cookiesPerHourArray: [],
-      getCustomersPerHour: function () {
-        return Math.floor(Math.random() * (this.max - this.min + 1) + this.min);
-      }
-    }
-  },
-      calcCookiesPerHour: function(){
-      // calc cookies for all 14 hours
-      // write a for loop that uses the length of the hours arary
-      //  in that loop
-      let custThisHour = this.getCustomersPerHour();
-      let cookiesSoldThisHour = Math.ceil(custThisHour * this.avg);
-      this.cookiesPerHourArray.push(cookiesSoldThisHour);
-      console.log('I am in the calcCookiesPerHour method', 'custThisHour: ', custThisHour, 'cookiesSoldThisHour: ', cookiesSoldThisHour);
-    },
-    render: function() {
-      this.calcCookiesPerHour();
-      console.log('this is the render method');
-      let paris = {
-        name: 'Paris',
-        min: 20,
-        max: 38,
-        avg: 2.3,
-        dailyTotal: 0,
-        cookiesPerHourArray: [],
-        getCustomersPerHour: function () {
-          return Math.floor(Math.random() * (this.max - this.min + 1) + this.min);
-        }
-      }
-    },
-      calcCookiesPerHour: function() {
-        // calc cookies for all 14 hours
-        // write a for loop that uses the length of the hours arary
-        //  in that loop
-        let custThisHour = this.getCustomersPerHour();
-        let cookiesSoldThisHour = Math.ceil(custThisHour * this.avg);
-        this.cookiesPerHourArray.push(cookiesSoldThisHour);
-        console.log('I am in the calcCookiesPerHour method', 'custThisHour: ', custThisHour, 'cookiesSoldThisHour: ', cookiesSoldThisHour);
-      },
-      render: function() {
-        this.calcCookiesPerHour();
-        console.log('this is the render method');
-        let lima = {
-          name: 'Lima',
-          min: 2,
-          max: 16,
-          avg: 4.6,
-          dailyTotal: 0,
-          cookiesPerHourArray: [],
-          getCustomersPerHour: function () {
-            return Math.floor(Math.random() * (this.max - this.min + 1) + this.min);
-          }
-        }
-      },
-        calcCookiesPerHour: function() {
-          // calc cookies for all 14 hours
-          // write a for loop that uses the length of the hours arary
-          //  in that loop
-          let custThisHour = this.getCustomersPerHour();
-          let cookiesSoldThisHour = Math.ceil(custThisHour * this.avg);
-          this.cookiesPerHourArray.push(cookiesSoldThisHour);
-          console.log('I am in the calcCookiesPerHour method', 'custThisHour: ', custThisHour, 'cookiesSoldThisHour: ', cookiesSoldThisHour);
-        },
-        render: function() {
-          this.calcCookiesPerHour();
-          console.log('this is the render method');
-        }
-      }
+  //   let custThisHour = this.getCustomersPerHour();
+  //   let cookiesSoldThisHour = Math.ceil(custThisHour * this.avg);
+  //   this.cookiesPerHourArray.push(cookiesSoldThisHour);
+  //   console.log('I am in the calcCookiesPerHour method', 'custThisHour: ', custThisHour, 'cookiesSoldThisHour: ', cookiesSoldThisHour);
+  // },
+  // render: function () {
+  //   this.calcCookiesPerHour();
+  //   console.log('this is the render method');
+  //   let dubai = {
+  //     name: 'Dubai',
+  //     min: 11,
+  //     max: 38,
+  //     avg: 3.7,
+  //     dailyTotal: 0,
+  //     cookiesPerHourArray: [],
+  //     getCustomersPerHour: function () {
+  //       return Math.floor(Math.random() * (this.max - this.min + 1) + this.min);
+  //     }
+  //   }
+  // },
+  //     calcCookiesPerHour: function(){
+  //     // calc cookies for all 14 hours
+  //     // write a for loop that uses the length of the hours arary
+  //     //  in that loop
+  //     let custThisHour = this.getCustomersPerHour();
+  //     let cookiesSoldThisHour = Math.ceil(custThisHour * this.avg);
+  //     this.cookiesPerHourArray.push(cookiesSoldThisHour);
+  //     console.log('I am in the calcCookiesPerHour method', 'custThisHour: ', custThisHour, 'cookiesSoldThisHour: ', cookiesSoldThisHour);
+  //   },
+  //   render: function() {
+  //     this.calcCookiesPerHour();
+  //     console.log('this is the render method');
+  //     let paris = {
+  //       name: 'Paris',
+  //       min: 20,
+  //       max: 38,
+  //       avg: 2.3,
+  //       dailyTotal: 0,
+  //       cookiesPerHourArray: [],
+  //       getCustomersPerHour: function () {
+  //         return Math.floor(Math.random() * (this.max - this.min + 1) + this.min);
+  //       }
+  //     }
+  //   },
+  //     calcCookiesPerHour: function() {
+  //       // calc cookies for all 14 hours
+  //       // write a for loop that uses the length of the hours arary
+  //       //  in that loop
+  //       let custThisHour = this.getCustomersPerHour();
+  //       let cookiesSoldThisHour = Math.ceil(custThisHour * this.avg);
+  //       this.cookiesPerHourArray.push(cookiesSoldThisHour);
+  //       console.log('I am in the calcCookiesPerHour method', 'custThisHour: ', custThisHour, 'cookiesSoldThisHour: ', cookiesSoldThisHour);
+  //     },
+  //     render: function() {
+  //       this.calcCookiesPerHour();
+  //       console.log('this is the render method');
+  //       let lima = {
+  //         name: 'Lima',
+  //         min: 2,
+  //         max: 16,
+  //         avg: 4.6,
+  //         dailyTotal: 0,
+  //         cookiesPerHourArray: [],
+  //         getCustomersPerHour: function () {
+  //           return Math.floor(Math.random() * (this.max - this.min + 1) + this.min);
+  //         }
+  //       }
+  //     },
+  //       calcCookiesPerHour: function() {
+  //         // calc cookies for all 14 hours
+  //         // write a for loop that uses the length of the hours arary
+  //         //  in that loop
+  //         let custThisHour = this.getCustomersPerHour();
+  //         let cookiesSoldThisHour = Math.ceil(custThisHour * this.avg);
+  //         this.cookiesPerHourArray.push(cookiesSoldThisHour);
+  //         console.log('I am in the calcCookiesPerHour method', 'custThisHour: ', custThisHour, 'cookiesSoldThisHour: ', cookiesSoldThisHour);
+  //       },
+  //       render: function() {
+  //         this.calcCookiesPerHour();
+  //         console.log('this is the render method');
+  //       }
+  //     }
